@@ -1,7 +1,7 @@
-import About from "@/components/sections/landingPage/about";
-import Reachout from "@/components/sections/landingPage/reachout";
+import About from "@/components/sections/about";
+import Reachout from "@/components/sections/reachout";
 import { Reveal } from "@/components/common/reveal";
-import Experience from "@/components/sections/landingPage/experience";
+import Experience from "@/components/sections/experience";
 import { Separator } from "@/components/ui/separator";
 import { createMetadata } from "@/lib/createMetadata";
 import { siteConfig } from "@/config/site";

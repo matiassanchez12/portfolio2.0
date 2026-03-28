@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 import SectionHeader from "@/components/common/section-header";
-import WorkContent from "./content/work-content";
-import ProjectsContent from "./content/projects-content";
-import GithubContent from "./content/github-content";
+import WorkContent from "./components/work-content";
+import ProjectsContent from "./components/projects-content";
+import GithubContent from "./components/github-content";
 
 type ContentType = "work" | "projects" | "github";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { socialLinks } from "@/data/socialLinks";
-import Name from "./name";
+import Name from "./components/name";
 import { motion } from "framer-motion";
 
 export default function About() {

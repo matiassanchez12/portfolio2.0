@@ -75,8 +75,8 @@ export function createMetadata({
       title: titleString,
       description,
       images: [image ?? siteConfig.ogImage],
-      creator: siteConfig.author.twitter,
-      site: siteConfig.author.twitter,
+      creator: siteConfig.author.linkedin,
+      site: siteConfig.author.linkedin,
     },
     icons,
     verification: {

@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import RoleBadge from "../role-badge";
+import RoleBadge from "./role-badge";
 
 export default function WorkContent() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
