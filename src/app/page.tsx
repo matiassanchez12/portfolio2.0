@@ -8,7 +8,9 @@ import { siteConfig } from "@/config/site";
 import Container from "@/components/common/container";
 
 export const metadata = createMetadata({
-  title: siteConfig.title,
+  title: {
+    default: `${siteConfig.name} | ${siteConfig.title}`,
+  },
   description: siteConfig.description,
   path: "/",
 });

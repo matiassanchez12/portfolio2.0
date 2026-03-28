@@ -15,8 +15,7 @@ import Head from "next/head";
 
 export const metadata = createMetadata({
   title: {
-    template: `%s | ${siteConfig.name}`,
-    default: siteConfig.title,
+    default: `${siteConfig.name} | ${siteConfig.title}`,
   },
   description: siteConfig.description,
   image: siteConfig.icons,
