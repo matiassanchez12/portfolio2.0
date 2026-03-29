@@ -11,7 +11,6 @@ export const siteConfig = {
     "matias sanchez",
     "matias sanchez portfolio",
     "matias developer",
-
     // Primary Roles
     "full stack developer",
     "full stack engineer",

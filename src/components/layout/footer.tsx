@@ -4,7 +4,7 @@ import { Separator } from "../ui/separator";
 
 export default function Footer() {
   return (
-    <footer className="mt-2 sm:mt-4 md:mt-6 mb-8 sm:mb-10 md:mb-12">
+    <footer className="mt-12 md:mt-4 mb-8 sm:mb-10 md:mb-12">
       <Separator className="mb-6" />
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <div className="flex  flex-col text-foreground sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0 text-xs opacity-70">
