@@ -32,7 +32,7 @@ export default function GithubContent() {
       try {
         const res = await fetch(
           `${githubConfig.apiUrl}/${githubConfig.username}.json`,
-          { signal: controller.signal, cache: "force-cache" }
+          { signal: controller.signal, cache: "force-cache" },
         );
         if (!res.ok) throw new Error();
 
@@ -60,12 +60,12 @@ export default function GithubContent() {
   const total = useMemo(
     () =>
       data?.reduce((s, x) => {
-        // Only count if within our displayed range. 
+        // Only count if within our displayed range.
         // For simplicity, summing all fetched for now or we can refine logic later.
         const d = new Date(x.date);
         return d.getFullYear() === 2026 ? s + x.count : s;
       }, 0) ?? 0,
-    [data]
+    [data],
   );
 
   // Calculate date range for 2025 (as requested in text) or last year
@@ -74,7 +74,7 @@ export default function GithubContent() {
   const endDate = new Date("2026-12-31");
 
   const loading = !data && !error;
-  console.log(error)
+  console.log(error);
   return (
     <div className="space-y-2 sm:space-y-3">
       {/* Loading */}
@@ -98,8 +98,8 @@ export default function GithubContent() {
 
       {/* Calendar */}
       {data && (
-        <div className="rounded-lg border p-4 bg-background/50">
-          <div className="w-full">
+        <div className="rounded-lg border p-2 sm:p-4 bg-background/50">
+          <div className="overflow-x-auto -mx-2 px-2">
             <CalendarHeatmap
               startDate={startDate}
               endDate={endDate}

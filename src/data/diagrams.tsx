@@ -21,20 +21,8 @@ const EmailApiDiagram = () => (
       y1="70"
       x2="150"
       y2="70"
-      stroke="white"
-      strokeOpacity="0.1"
       strokeDasharray="4"
-      className="animate-dash hidden dark:block"
-    />
-    <line
-      x1="100"
-      y1="70"
-      x2="150"
-      y2="70"
-      stroke="black"
-      strokeOpacity="0.2"
-      strokeDasharray="4"
-      className="animate-dash block dark:hidden"
+      className="animate-dash stroke-emerald-600/60 dark:stroke-emerald-500/60"
     />
 
     <rect
@@ -58,20 +46,8 @@ const EmailApiDiagram = () => (
       y1="70"
       x2="325"
       y2="70"
-      stroke="white"
-      strokeOpacity="0.1"
       strokeDasharray="4"
-      className="animate-dash hidden dark:block"
-    />
-    <line
-      x1="275"
-      y1="70"
-      x2="325"
-      y2="70"
-      stroke="black"
-      strokeOpacity="0.2"
-      strokeDasharray="4"
-      className="animate-dash block dark:hidden"
+      className="animate-dash stroke-emerald-600/60 dark:stroke-emerald-500/60"
     />
 
     <rect
@@ -196,22 +172,6 @@ const CeluDiagram = () => (
 
 const ChronoDiagram = () => (
   <svg viewBox="0 0 450 160" className="h-auto w-full overflow-visible">
-    <defs>
-      <marker
-        id="arrow-green"
-        markerWidth="10"
-        markerHeight="10"
-        refX="9"
-        refY="5"
-        orient="auto"
-      >
-        <path
-          d="M0,0 L10,5 L0,10 Z"
-          className="fill-emerald-600/40 dark:fill-emerald-500/40"
-        />
-      </marker>
-    </defs>
-
     {/* Frontend */}
     <rect
       x="10"
@@ -234,11 +194,8 @@ const ChronoDiagram = () => (
       y1="80"
       x2="160"
       y2="80"
-      stroke="#059669"
-      strokeOpacity="0.6"
       strokeDasharray="4"
-      className="animate-dash"
-      markerEnd="url(#arrow-green)"
+      className="animate-dash stroke-emerald-600/60 dark:stroke-emerald-500/60"
     />
 
     {/* Edge Layer */}
@@ -271,57 +228,23 @@ const ChronoDiagram = () => (
       y1="80"
       x2="330"
       y2="80"
-      stroke="#059669"
-      strokeOpacity="0.6"
       strokeDasharray="4"
-      className="animate-dash"
-      markerEnd="url(#arrow-green)"
+      className="animate-dash stroke-emerald-600/60 dark:stroke-emerald-500/60"
     />
 
     {/* Persistence Layer */}
-    <path
-      d="M 335 80 H 355 V 45 H 385"
-      fill="none"
-      className="animate-dash stroke-gray-400/50"
-      strokeDasharray="4"
-      markerEnd="url(#arrow-green)"
-    />
-    <path
-      d="M 335 80 H 355 V 115 H 385"
-      fill="none"
-      className="animate-dash stroke-gray-400/50"
-      strokeDasharray="4"
-      markerEnd="url(#arrow-green)"
-    />
-
     <rect
-      x="390"
-      y="15"
-      width="50"
-      height="45"
+      x="330"
+      y="50"
+      width="75"
+      height="60"
       className="fill-gray-100 stroke-gray-300 dark:fill-black/40 dark:stroke-white/20"
     />
     <text
-      x="415"
-      y="43"
+      x="367"
+      y="85"
       textAnchor="middle"
-      className="fill-gray-700 font-mono text-[10px] uppercase dark:fill-gray-300"
-    >
-      Zustand
-    </text>
-
-    <rect
-      x="390"
-      y="95"
-      width="50"
-      height="45"
-      className="fill-gray-100 stroke-gray-300 dark:fill-black/40 dark:stroke-white/20"
-    />
-    <text
-      x="415"
-      y="123"
-      textAnchor="middle"
-      className="fill-gray-700 font-mono text-[10px] uppercase dark:fill-gray-300"
+      className="fill-gray-700 font-mono text-[12px] uppercase dark:fill-gray-300"
     >
       Postgres
     </text>

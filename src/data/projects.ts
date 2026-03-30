@@ -10,7 +10,6 @@ export const projectsData: ProjectCard[] = [
     technologies: ['Laravel', 'PostgreSQL', 'Redis', 'Nginx'],
     description: 'High-throughput API architecture with master-slave replication and sophisticated caching layers.',
     diagram: ChronoDiagram,
-    metrics: [{ label: 'Latency', value: '-65%' }, { label: 'Requests', value: '1M+' }]
   },
   {
     id: 'youremail',

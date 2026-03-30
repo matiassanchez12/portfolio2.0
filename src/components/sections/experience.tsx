@@ -40,7 +40,7 @@ export default function ExperienceContent() {
   };
 
   return (
-    <section className="h-full min-h-[360px] overflow-y-auto mb-6 sm:mb-8 md:mb-10">
+    <section className="h-full min-h-[280px] sm:min-h-[360px] overflow-y-auto mb-6 sm:mb-8 md:mb-10">
       <SectionHeader
         title={contentConfig.title}
         textButton={contentConfig.textButton}

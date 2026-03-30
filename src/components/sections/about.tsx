@@ -1,6 +1,6 @@
 "use client";
 
-import { socialLinks } from "@/data/socialLinks";
+import { socialLinks } from "@/data/social-links";
 import Name from "./components/name";
 import { motion } from "framer-motion";
 

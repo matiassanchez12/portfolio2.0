@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import Link from "next/link";
-import { projectsData } from "@/data/Projects";
+import { projectsData } from "@/data/projects";
 import ProjectDetail from "./project-detail";
 import ProjectNode from "./project-node";
 
