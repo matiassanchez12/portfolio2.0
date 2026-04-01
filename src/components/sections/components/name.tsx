@@ -18,7 +18,7 @@ export default function Name() {
         </div>
 
         <span className="text-sm font-serif sm:text-sm text-foreground/70 leading-relaxed">
-          Software Architect & Backend Engineer
+           Software Developer | Backend & Fullstack | Tech Blogger
         </span>
       </div>
 
