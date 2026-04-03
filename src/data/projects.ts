@@ -1,13 +1,22 @@
 import { ProjectCard } from "@/types/project";
-import { CeluDiagram, ChronoDiagram, EmailApiDiagram} from "./diagrams"
+import { CeluDiagram, ChronoDiagram, EmailApiDiagram, PlattyDiagram} from "./diagrams"
 
 export const projectsData: ProjectCard[] = [
+  {
+    id: 'platty',
+    title: 'Platty',
+    href: '',
+    status: 'building',
+    technologies: ['Laravel', 'PostgreSQL', 'Docker', 'Sail', 'React.js'],
+    description: 'Modern SaaS platform what i am building with Laravel and Inertia.js. It features a robust multi-tenant architecture, dynamic content rendering, and a sophisticated caching strategy to ensure optimal performance and scalability.',
+    diagram: PlattyDiagram,
+  },
   {
     id: 'chrono',
     title: 'Chrono Task',
     href: 'https://chrono-task-productivity.vercel.app/admin',
     status: 'running',
-    technologies: ['Laravel', 'PostgreSQL', 'Redis', 'Nginx'],
+    technologies: ['Nextjs', 'PostgreSQL', 'Prisma', 'Vercel'],
     description: 'High-throughput API architecture with master-slave replication and sophisticated caching layers.',
     diagram: ChronoDiagram,
   },
