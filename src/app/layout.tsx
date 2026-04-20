@@ -12,6 +12,7 @@ import Container from "../components/common/container";
 import { ThemeProvider } from "next-themes";
 import { ThemeScript } from "../components/theme/theme-script";
 import Head from "next/head";
+import Script from "next/script";
 
 export const metadata = createMetadata({
   title: {
@@ -60,7 +61,9 @@ export default function RootLayout({
      <html lang="en" suppressHydrationWarning>
       <Head>
         <ThemeScript />
+        <Script defer src="https://cloud.umami.is/script.js" data-website-id="931178f2-0368-4b89-bc5f-42a484979afe" />
       </Head>
+      
       <body
         className={`${geistSans.className} ${instrumentSerif.variable} ${playfairDisplay.variable} ${inter.variable} ${jetbrainsMono.variable} flex min-h-screen flex-col`}
       >
