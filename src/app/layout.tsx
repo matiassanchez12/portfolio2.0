@@ -61,12 +61,12 @@ export default function RootLayout({
      <html lang="en" suppressHydrationWarning>
       <Head>
         <ThemeScript />
-        <Script defer src="https://cloud.umami.is/script.js" data-website-id="931178f2-0368-4b89-bc5f-42a484979afe" />
       </Head>
       
       <body
         className={`${geistSans.className} ${instrumentSerif.variable} ${playfairDisplay.variable} ${inter.variable} ${jetbrainsMono.variable} flex min-h-screen flex-col`}
       >
+        <Script defer src="https://cloud.umami.is/script.js" data-website-id="931178f2-0368-4b89-bc5f-42a484979afe" />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
