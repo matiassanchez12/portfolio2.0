@@ -18,7 +18,8 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="text-sm font-sans leading-relaxed text-foreground/70"
         >
-          Architecting distributed systems and clean, maintainable infrastructures with <span className="text-foreground">modern PHP</span>. Focused on <span>database optimization</span>, low-latency <span className="text-foreground/90">APIs</span>, and <span className="text-foreground/90">high-traffic data persistence</span>.
+          Architecting distributed systems and clean, maintainable infrastructures with <span className="text-foreground">modern technologies</span>. 
+          Focused on database optimization, low-latency <span className="text-foreground/90">APIs</span>, and <span className="text-foreground/90">high-traffic data persistence</span>.
         </motion.p>
 
         {/* Socials */}
