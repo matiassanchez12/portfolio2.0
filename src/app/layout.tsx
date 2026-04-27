@@ -19,7 +19,7 @@ export const metadata = createMetadata({
     default: `${siteConfig.name} | ${siteConfig.title}`,
   },
   description: siteConfig.description,
-  image: siteConfig.icons,
+  image: siteConfig.ogImage,
   path: "/",
 });
 
