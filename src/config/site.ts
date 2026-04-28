@@ -4,7 +4,7 @@ export const siteConfig = {
   description:
     "Building scalable applications with React, Next.js, Node.js, PHP, and modern cloud technologies.",
   url: "https://matias-sanchez.vercel.app",
-  ogImage: "/logo-white.svg",
+  ogImage: "/og-image.png",
   icons: "/favicon.ico",
   keywords: [
     // Personal Brand
@@ -105,7 +105,7 @@ export const siteConfig = {
         "developer background",
         "technical skills",
       ],
-      ogImage: "/logo-white.svg",
+      ogImage: "/og-image.png",
     },
     capabilities: {
       title: "Skills - Full Stack Web Development & DevOps",
@@ -120,7 +120,7 @@ export const siteConfig = {
         "frameworks",
         "technologies",
       ],
-      ogImage: "/logo-white.jpg",
+      ogImage: "/og-image.png",
     }
   }
 };

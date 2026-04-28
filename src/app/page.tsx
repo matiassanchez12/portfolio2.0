@@ -12,6 +12,7 @@ export const metadata = createMetadata({
     default: `${siteConfig.name} | ${siteConfig.title}`,
   },
   description: siteConfig.description,
+  image: siteConfig.ogImage,
   path: "/",
 });
 

@@ -21,6 +21,7 @@ export const metadata = createMetadata({
   description: siteConfig.description,
   image: siteConfig.ogImage,
   path: "/",
+  
 });
 
 const geistSans = Inter({
