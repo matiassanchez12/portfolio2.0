@@ -1,5 +1,5 @@
 import { ProjectCard } from "@/types/project";
-import { CeluDiagram, ChronoDiagram, EmailApiDiagram, PlattyDiagram} from "./diagrams"
+import { CeluDiagram, ChronoDiagram, EmailApiDiagram, PlattyDiagram, TesloDiagram} from "./diagrams"
 
 export const projectsData: ProjectCard[] = [
   {
@@ -29,6 +29,15 @@ export const projectsData: ProjectCard[] = [
     description: 'Enterprise SMTP abstraction layer designed to decouple email delivery logic through a centralized dashboard.',
     diagram: EmailApiDiagram,
     metrics: [{ label: 'Integration', value: 'Fast' }, { label: 'Security', value: 'Proxy' }]
+  },
+  {
+    id: 'teslo',
+    title: 'Teslo Shop',
+    href: 'https://teslo-e-shop.vercel.app/',
+    status: 'running',
+    technologies: ['Nextjs', 'Mongodb', 'Vercel', 'Material UI', 'Paypal SDK'],
+    description: 'E-commerce created as challenge of Next.js course.',
+    diagram: TesloDiagram,
   },
   {
     title: "En el celu",

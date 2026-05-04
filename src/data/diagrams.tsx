@@ -183,11 +183,19 @@ const PlattyDiagram = () => (
     />
     <text
       x="60"
-      y="85"
+      y="73"
       textAnchor="middle"
       className="fill-gray-700 font-mono text-[12px] tracking-tight uppercase dark:fill-gray-300"
     >
-      Inertia.js
+      Nextjs 16
+    </text>
+    <text
+      x="60"
+      y="88"
+      textAnchor="middle"
+      className="fill-gray-700 font-mono text-[10px] tracking-tight uppercase dark:fill-gray-300"
+    >
+      (Atomic Design)
     </text>
 
     <line
@@ -209,19 +217,11 @@ const PlattyDiagram = () => (
     />
     <text
       x="222"
-      y="78"
+      y="85"
       textAnchor="middle"
       className="fill-emerald-700 font-mono text-[12px] uppercase dark:fill-emerald-400"
     >
-      Laravel
-    </text>
-    <text
-      x="222"
-      y="95"
-      textAnchor="middle"
-      className="fill-emerald-700/60 font-mono text-[10px] tracking-[0.2em] uppercase dark:fill-emerald-500/50"
-    >
-      (Repository, Eloquent ORM)
+      Server functions
     </text>
 
     <line
@@ -333,4 +333,78 @@ const ChronoDiagram = () => (
   </svg>
 );
 
-export { CeluDiagram, ChronoDiagram, EmailApiDiagram, PlattyDiagram };
+
+const TesloDiagram = () => (
+  <svg viewBox="0 0 450 160" className="h-auto w-full overflow-visible">
+    {/* Frontend */}
+    <rect
+      x="10"
+      y="50"
+      width="100"
+      height="60"
+      className="fill-gray-100 stroke-gray-300 dark:fill-black/40 dark:stroke-white/20"
+    />
+    <text
+      x="60"
+      y="85"
+      textAnchor="middle"
+      className="fill-gray-700 font-mono text-[12px] tracking-tight uppercase dark:fill-gray-300"
+    >
+      Next.js
+    </text>
+
+    <line
+      x1="110"
+      y1="80"
+      x2="160"
+      y2="80"
+      strokeDasharray="4"
+      className="animate-dash stroke-emerald-600/60 dark:stroke-emerald-500/60"
+    />
+
+    {/* Edge Layer */}
+    <rect
+      x="165"
+      y="50"
+      width="115"
+      height="60"
+      className="fill-emerald-100 stroke-emerald-300 dark:fill-black/60 dark:stroke-emerald-500/40"
+    />
+    <text
+      x="222"
+      y="85"
+      textAnchor="middle"
+      className="fill-emerald-700 font-mono text-[12px] uppercase dark:fill-emerald-400"
+    >
+      Nodejs Api
+    </text>
+
+    <line
+      x1="280"
+      y1="80"
+      x2="330"
+      y2="80"
+      strokeDasharray="4"
+      className="animate-dash stroke-emerald-600/60 dark:stroke-emerald-500/60"
+    />
+
+    {/* Persistence Layer */}
+    <rect
+      x="330"
+      y="50"
+      width="75"
+      height="60"
+      className="fill-gray-100 stroke-gray-300 dark:fill-black/40 dark:stroke-white/20"
+    />
+    <text
+      x="367"
+      y="85"
+      textAnchor="middle"
+      className="fill-gray-700 font-mono text-[12px] uppercase dark:fill-gray-300"
+    >
+      Mongo DB
+    </text>
+  </svg>
+);
+
+export { CeluDiagram, ChronoDiagram, EmailApiDiagram, PlattyDiagram, TesloDiagram };
