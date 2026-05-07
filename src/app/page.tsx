@@ -6,6 +6,10 @@ import { Separator } from "@/components/ui/separator";
 import { createMetadata } from "@/lib/createMetadata";
 import { siteConfig } from "@/config/site";
 import Container from "@/components/common/container";
+import ProjectsContent from "@/components/sections/components/projects-content";
+import SectionHeader from "@/components/common/section-header";
+import WorkContent from "@/components/sections/components/work-content";
+import GithubContent from "@/components/sections/components/github-content";
 
 export const metadata = createMetadata({
   title: {
@@ -35,7 +39,23 @@ export default function HomePage() {
 
           {/* Experience Section */}
           <Reveal delay={0.3}>
-            <Experience />
+              <ProjectsContent />
+          </Reveal>
+
+          <Reveal delay={0.4}>
+            <Separator className="my-6 sm:my-8" />
+          </Reveal>
+
+          <Reveal delay={0.3}>
+              <WorkContent />
+          </Reveal>
+
+          <Reveal delay={0.4}>
+            <Separator className="my-6 sm:my-8" />
+          </Reveal>
+
+          <Reveal delay={0.3}>
+            <GithubContent />
           </Reveal>
 
           <Reveal delay={0.4}>

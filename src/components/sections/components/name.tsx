@@ -18,14 +18,14 @@ export default function Name() {
         </div>
 
         <span className="text-sm font-serif sm:text-sm text-foreground/70 leading-relaxed">
-           Software Developer | Backend & Fullstack | Tech Blogger
+           Software Developer | Backend & Fullstack
         </span>
       </div>
 
       <div>
-        {/* <div className="opacity-60 top-0 right-0 text-sm">
+        <div className="opacity-60 top-0 right-0 text-sm">
           <ThemeToggleButton variant="circle" start="top-right" blur />
-        </div> */}
+        </div>
       </div>
     </div>
   );

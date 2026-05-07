@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 
 import "react-calendar-heatmap/dist/styles.css";
 import "@/styles/github-calendar.css"; // We will create this
+import SectionHeader from "@/components/common/section-header";
 
 const CalendarHeatmap = dynamic(() => import("react-calendar-heatmap"), {
   ssr: false,
@@ -74,80 +75,88 @@ export default function GithubContent() {
   const endDate = new Date("2026-12-31");
 
   const loading = !data && !error;
-  console.log(error);
+
   return (
-    <div className="space-y-2 sm:space-y-3">
-      {/* Loading */}
-      {loading && (
-        <div className="py-16 text-center animate-pulse text-sm text-muted-foreground">
-          Loading activity…
-        </div>
-      )}
-
-      {/* Error */}
-      {error && (
-        <div className="p-8 text-center border-2 border-dashed rounded-xl">
-          <GithubIcon className="w-8 h-8 mx-auto mb-4" />
-          <Button asChild variant="outline">
-            <Link href={`https://github.com/${githubConfig.username}`}>
-              Visit GitHub
-            </Link>
-          </Button>
-        </div>
-      )}
-
-      {/* Calendar */}
-      {data && (
-        <div className="rounded-lg border p-2 sm:p-4 bg-background/50">
-          <div className="overflow-x-auto -mx-2 px-2">
-            <CalendarHeatmap
-              startDate={startDate}
-              endDate={endDate}
-              values={data}
-              classForValue={(value) => {
-                if (!value || value.count === 0) {
-                  return "color-empty";
-                }
-                if (value.count < 3) return "color-scale-1";
-                if (value.count < 6) return "color-scale-2";
-                if (value.count < 10) return "color-scale-3";
-                return "color-scale-4";
-              }}
-              tooltipDataAttrs={(value: any) => {
-                if (!value || !value.date) {
-                  return {} as any;
-                }
-                return {
-                  "data-tooltip-id": "github-tooltip",
-                  "data-tooltip-content": `${value.count} activities on ${value.date}`,
-                } as any;
-              }}
-              showWeekdayLabels={true}
-            />
-            <Tooltip id="github-tooltip" className="z-50 text-xs" />
+    <section className="h-full overflow-y-auto mb-6 sm:mb-8 md:mb-10">
+      <div className="pb-4">
+        <SectionHeader
+          title={"Activity"}
+          subtitle={"Contributions to improve myself"}
+        />
+      </div>
+      <div className="space-y-2 sm:space-y-3">
+        {/* Loading */}
+        {loading && (
+          <div className="py-16 text-center animate-pulse text-sm text-muted-foreground">
+            Loading activity…
           </div>
+        )}
 
-          {/* Footer: Count + Legend */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 pt-2 border-t border-border/50 mt-4">
-            <div className="text-xs sm:text-sm text-muted-foreground font-medium">
-              {total.toLocaleString()} activities in 2026
+        {/* Error */}
+        {error && (
+          <div className="p-8 text-center border-2 border-dashed rounded-xl">
+            <GithubIcon className="w-8 h-8 mx-auto mb-4" />
+            <Button asChild variant="outline">
+              <Link href={`https://github.com/${githubConfig.username}`}>
+                Visit GitHub
+              </Link>
+            </Button>
+          </div>
+        )}
+
+        {/* Calendar */}
+        {data && (
+          <div className="rounded-lg border p-2 sm:p-4 bg-background/50">
+            <div className="overflow-x-auto -mx-2 px-2">
+              <CalendarHeatmap
+                startDate={startDate}
+                endDate={endDate}
+                values={data}
+                classForValue={(value) => {
+                  if (!value || value.count === 0) {
+                    return "color-empty";
+                  }
+                  if (value.count < 3) return "color-scale-1";
+                  if (value.count < 6) return "color-scale-2";
+                  if (value.count < 10) return "color-scale-3";
+                  return "color-scale-4";
+                }}
+                tooltipDataAttrs={(value: any) => {
+                  if (!value || !value.date) {
+                    return {} as any;
+                  }
+                  return {
+                    "data-tooltip-id": "github-tooltip",
+                    "data-tooltip-content": `${value.count} activities on ${value.date}`,
+                  } as any;
+                }}
+                showWeekdayLabels={true}
+              />
+              <Tooltip id="github-tooltip" className="z-50 text-xs" />
             </div>
 
-            <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <span>Less</span>
-              <div className="flex gap-1">
-                {/* Legend Swatches - matched to CSS classes */}
-                <div className="w-3 h-3 rounded-[2px] bg-[var(--color-github-0)]" />
-                <div className="w-3 h-3 rounded-[2px] bg-[var(--color-github-1)]" />
-                <div className="w-3 h-3 rounded-[2px] bg-[var(--color-github-2)]" />
-                <div className="w-3 h-3 rounded-[2px] bg-[var(--color-github-3)]" />
-                <div className="w-3 h-3 rounded-[2px] bg-[var(--color-github-4)]" />
+            {/* Footer: Count + Legend */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 pt-2 border-t border-border/50 mt-4">
+              <div className="text-xs sm:text-sm text-muted-foreground font-medium">
+                {total.toLocaleString()} activities in 2026
               </div>
-              <span>More</span>
+
+              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                <span>Less</span>
+                <div className="flex gap-1">
+                  {/* Legend Swatches - matched to CSS classes */}
+                  <div className="w-3 h-3 rounded-[2px] bg-[var(--color-github-0)]" />
+                  <div className="w-3 h-3 rounded-[2px] bg-[var(--color-github-1)]" />
+                  <div className="w-3 h-3 rounded-[2px] bg-[var(--color-github-2)]" />
+                  <div className="w-3 h-3 rounded-[2px] bg-[var(--color-github-3)]" />
+                  <div className="w-3 h-3 rounded-[2px] bg-[var(--color-github-4)]" />
+                </div>
+                <span>More</span>
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </section>
   );
 }

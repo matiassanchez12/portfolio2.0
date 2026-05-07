@@ -8,7 +8,7 @@ export const projectsData: ProjectCard[] = [
     href: 'https://platty-app.vercel.app/',
     status: 'running',
     technologies: ['Laravel', 'PostgreSQL', 'Docker', 'Sail', 'React.js'],
-    description: 'Modern SaaS platform what i am building with Laravel and Inertia.js. It features a robust multi-tenant architecture, dynamic content rendering, and a sophisticated caching strategy to ensure optimal performance and scalability.',
+    description: 'Modern SaaS platform what i am building with Next.js 16, Prisma and PostgreSQL. It features a robust multi-tenant architecture, dynamic content rendering, and a sophisticated caching strategy to ensure optimal performance and scalability.',
     diagram: PlattyDiagram,
   },
   {

@@ -9,7 +9,7 @@ export default function RoleBadge ({ level }: RoleBadgeProps) {
     semisenior: { label: 'Semi Senior', color: 'text-blue-400', glow: 'shadow-[0_0_8px_rgba(96,165,250,0.2)]' },
     senior: { label: 'Senior', color: 'text-purple-400', glow: 'shadow-[0_0_8px_rgba(192,132,252,0.2)]' },
     lead: { label: 'Lead', color: 'text-rose-400', glow: 'shadow-[0_0_8px_rgba(251,113,133,0.2)]' },
-    fullstack: { label: 'Full Stack', color: 'text-gray-400', glow: '' },
+    fullstack: { label: 'Full Stack', color: 'text-blue-400', glow: '' },
   };
 
   const { label, color, glow } = config[level] || config.fullstack;
