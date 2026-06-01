@@ -35,7 +35,7 @@ export default function ProjectsContent() {
       <div className="pb-4">
         <SectionHeader
           title={"Projects"}
-          subtitle={"6 builds • soon: 2 more"}
+          subtitle={`${projectsData.length} builds • soon: 2 more`}
         />
       </div>
       <div className="space-y-2 sm:space-y-3">
