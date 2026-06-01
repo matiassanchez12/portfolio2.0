@@ -1,5 +1,5 @@
 import { ProjectCard } from "@/types/project";
-import { CeluDiagram, ChronoDiagram, EmailApiDiagram, PlattyDiagram, TesloDiagram} from "./diagrams"
+import { CeluDiagram, ChronoDiagram, EmailApiDiagram, PlattyDiagram, TesloDiagram, TheDevHouseDiagram} from "./diagrams"
 
 export const projectsData: ProjectCard[] = [
   {
@@ -9,7 +9,7 @@ export const projectsData: ProjectCard[] = [
     status: 'running',
     technologies: ['PHP', 'Laravel', 'PostgreSQL', 'Sail', 'S3', 'Shadcn', 'Inertia.js'],
     description: 'Platform for developers to share their projectsand connect with other developers. It features a robust arquitecture and sophisticated caching strategy to ensure optimal performance and scalability.',
-    diagram: PlattyDiagram,
+    diagram: TheDevHouseDiagram,
   },
   {
     id: 'platty',

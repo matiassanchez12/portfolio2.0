@@ -649,4 +649,4 @@ const TesloDiagram = () => (
   </svg>
 );
 
-export { CeluDiagram, ChronoDiagram, EmailApiDiagram, PlattyDiagram, TesloDiagram };
+export { CeluDiagram, ChronoDiagram, EmailApiDiagram, PlattyDiagram, TesloDiagram, TheDevHouseDiagram };
