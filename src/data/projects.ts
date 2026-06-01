@@ -3,11 +3,20 @@ import { CeluDiagram, ChronoDiagram, EmailApiDiagram, PlattyDiagram, TesloDiagra
 
 export const projectsData: ProjectCard[] = [
   {
+    id: 'the-dev-house',
+    title: 'The Dev House',
+    href: 'https://the-dev-house-1.onrender.com/',
+    status: 'running',
+    technologies: ['PHP', 'Laravel', 'PostgreSQL', 'Sail', 'S3', 'Shadcn', 'Inertia.js'],
+    description: 'Platform for developers to share their projectsand connect with other developers. It features a robust arquitecture and sophisticated caching strategy to ensure optimal performance and scalability.',
+    diagram: PlattyDiagram,
+  },
+  {
     id: 'platty',
     title: 'Platty',
     href: 'https://platty-app.vercel.app/',
     status: 'running',
-    technologies: ['Laravel', 'PostgreSQL', 'Docker', 'Sail', 'React.js'],
+    technologies: ['Next.js', 'PostgreSQL', 'Prisma', 'S3', 'Shadcn', 'React.js'],
     description: 'Modern SaaS platform what i am building with Next.js 16, Prisma and PostgreSQL. It features a robust multi-tenant architecture, dynamic content rendering, and a sophisticated caching strategy to ensure optimal performance and scalability.',
     diagram: PlattyDiagram,
   },
